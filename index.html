@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Create a single BeerXML file from mulitple reciepe files</title>
+		<link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+	<body>
+		<div id="container">
+			<input id="fileupload" type="file" name="files[]" data-url="./lib/processfiles.php" multiple accept="text/xml">
+			<h1>Drag your Beer.xml files into this window</h1>
+			<table id="upload-table" class="table table-bordered table-striped">
+				<tr id="table-header">
+					<th>File</th>
+					<th>Use It?</th> 
+				</tr>
+			</table>
+			<form id="download-form" action="./lib/download.php" method="POST">
+				<input id="form-xmlstr" name="xmlstr" type="text"></input>
+				<button id="form-submit" type="submit">Download</button>
+			</form>
+			<button id="process-btn" class="btn btn-primary">Combine and Download</button>
+			<div id="error-alert" class="alert alert-danger">
+				<div id="alert-text">
+					<p>Uh oh, there were problems:</p>
+					<ul id="error-list"></ul>
+				</div>
+				<button id="download-anyway" class="btn btn-danger">Download Anyway</button>
+			</div>
+		</div>
+		<script src="./vendor/jquery/jquery-2.0.0.min.js"></script>
+		<script src="./vendor/jqueryui/jquery.ui.widget.js"></script>
+		<script src="./vendor/blueimp/jquery.iframe-transport.js"></script>
+		<script src="./vendor/blueimp/jquery.fileupload.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

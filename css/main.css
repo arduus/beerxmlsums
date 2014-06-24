@@ -1,0 +1,39 @@
+#container {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+}
+
+#download-form {
+	display: none;
+}
+
+#table-header {
+	display: none;
+}
+
+#fileupload {
+	display: none;
+}
+
+#process-btn {
+	display: none;
+}
+
+#alert-text {
+	margin-right: 185px;
+}
+
+#error-alert {
+	position: relative;
+	display: none;
+	margin-top: 15px
+}
+
+#download-anyway {
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
